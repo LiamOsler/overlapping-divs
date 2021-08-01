@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>CSCI 3130 Assignment 2 - Liam Osler</title>
+
+<body>
+</body>
+
+<script>
+    document.body.style.backgroundColor = "lightgrey"; //Set the background color of the page to grey
+    
+    //Create and style the required page elements:
+
+    //Container/row for the circles:
+    const circleContainer = document.createElement("div"); //Create a container for the circle elements
+    circleContainer.style.width = "fit-content"; //Width must be "fit-content" for margin-auto to work in this particular case               
+    circleContainer.style.height = "200px";
+    circleContainer.style.margin = "auto"; //Margin auto centers the content
+
+    //Container for centering the circles on in the body:
+    const centerContainer = document.createElement("div");
+    centerContainer.style.width = "450px"
+    centerContainer.style.position = "relative";
+    
+    //Define the left circle:
+    const circleLeft = document.createElement("div");
+    circleLeft.style.backgroundColor = "red";
+    circleLeft.style.height = "200px";
+    circleLeft.style.width = "200px";
+    circleLeft.style.borderRadius = "50%";
+    circleLeft.style.position = "absolute"
+    circleLeft.style.left = "0%"
+
+    //Define the right circle (with alpha transparency):
+    const circleRight = document.createElement("div");
+    circleRight.style.backgroundColor = "rgba(255, 255, 0, .5)";
+    circleRight.style.height = "200px";
+    circleRight.style.width = "200px";
+    circleRight.style.borderRadius = "50%";
+    circleRight.style.position = "absolute"
+    circleRight.style.right = "0%"
+
+    //Container/row for the button:
+    const buttonContainer = document.createElement("div"); //A container for the buttons
+    buttonContainer.style.width = "fit-content"; 
+    buttonContainer.style.margin = "auto";
+    buttonContainer.style.marginTop = "10px";
+
+    //Define the button:
+    const button = document.createElement("BUTTON");
+    button.innerHTML = "Intersect";
+
+    //Adding the created elements to the HTML:
+    document.body.appendChild(circleContainer);
+    circleContainer.appendChild(centerContainer);
+    centerContainer.appendChild(circleLeft);
+    centerContainer.appendChild(circleRight);
+    document.body.appendChild(buttonContainer);
+    buttonContainer.appendChild(button);
+
+    //Function that triggers when the button is clicked:
+    button.onclick = function(){
+            circleLeft.style.left = "15%";
+            circleRight.style.right = "15%";
+            button.style.display = "none";
+    }
+</script>
+
+</html>
+
