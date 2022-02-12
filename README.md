@@ -1,1 +1,1 @@
-Draw two intersecting circles (one with alpha transparency) and a button that when clicked, changes the state of the circle and disappears.
+Basic demonstations showing how to draw two intersecting circles (one with alpha transparency) using javascript, centered on the page
